@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Blog</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7; /* Light Gray */
+        }
+
+        .blog-container {
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        .blog-card {
+            width: 30%;
+            text-align: left;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* White */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            color: #555; /* Dark Gray */
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            color: #333; /* Black */
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555; /* Dark Gray */
+            margin-bottom: 15px;
+        }
+
+        button {
+            border: 0;
+            background-color: #3498db; /* Dodger Blue */
+            color: #fff; /* White */
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #2980b9; /* Darker Dodger Blue */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blog-container">
+        <!-- Blog Card 1 -->
+        <div class="blog-card">
+            <img src="./image1.png" alt="Fashion Image">
+            <h4>Fashion Tips</h4>
+            <h1>What Curling Irons Are the Best Ones</h1>
+            <p>Consectetur adipiscing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus</p>
+            <button><u><b>Read more</b></u></button>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="blog-card">
+            <img src="./image2.png" alt="Fashion Image">
+            <h4>Fashion Tips</h4>
+            <h1>Vogue's Ultimate Guide To Autumn/Winter 2019 Shoes</h1>
+            <p>Consectetur adipiscing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus</p>
+            <button><u><b>Read more</b></u></button>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="blog-card">
+            <img src="./image3.png" alt="Fashion Image">
+            <h4>Fashion Tips</h4>
+            <h1>What Curling Irons Are the Best Ones</h1>
+            <p>Consectetur adipiscing elit. Laborum fuga incidunt laboriosam voluptas iure, delectus</p>
+            <button><u><b>Read more</b></u></button>
+        </div>
+    </div>
+</body>
+
+</html>

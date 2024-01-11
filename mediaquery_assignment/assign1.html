@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign1</title>
+    <style>
+        #navbar {
+            background-color: yellow;
+            font-size: 40px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        #boxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 200px;
+            gap: 20px;
+        }
+
+        #boxes>div:nth-child(1) {
+            background-color: red;
+        }
+
+        #boxes>div:nth-child(2) {
+            background-color: green;
+        }
+
+
+        @media all and (min-width:481px) and (max-width:768px) {
+            #boxes {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(2, 200px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">Navigation</div>
+    <div id="boxes">
+        <div>LEFT BOX</div>
+        <div>RIGHT BOX</div>
+    </div>
+</body>
+
+</html>

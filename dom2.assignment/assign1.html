@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #f2f2f2;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-left: 0.3%;
+    }
+
+    .container {
+        border: 6px solid #4CAF50;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    #bmi {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2em;
+        color: #4CAF50;
+    }
+
+    h1 {
+        font-family: 'Cambria', Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.5em;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    input {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    #cal {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    #res {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.2em;
+        margin-top: 10px;
+        color: #333333;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="bmi">BMI CALCULATOR</div>
+        <div>
+            <h1>Weight</h1>
+            <h1>Height</h1>
+            <input id="weight" type="number" placeholder="weight">
+            <input id="height" type="number" placeholder="height"><br>
+            <button id="cal" onclick="total()">Calculate</button>
+            <output id="res">Result</output>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let p = document.getElementById("res")
+    function total() {
+        let w = document.getElementById("weight").value
+        let h = document.getElementById("height").value
+        let BMI = w / (h * h);
+        if (BMI <= 18.4) {
+            p.innerText = "UnderWeight";
+        } else if (BMI >= 18.5 && BMI <= 24.9) {
+            p.innerText = "Normal Weight";
+        } else if (BMI >= 25 && BMI <= 29.9) {
+            p.innerText = "Overweight";
+        } else {
+            p.innerText = "Obese";
+        }
+
+    }
+</script>

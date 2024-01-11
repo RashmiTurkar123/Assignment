@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Manipulation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff;
+            color: #3E2723; /* Brown */
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1, div, p {
+            font-weight: bold;
+            color: #3E2723; /* Brown */
+        }
+
+        hr {
+            width: 100%;
+            border: 1px solid #3E2723; /* Brown */
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #795548; /* Brown */
+            color: #fff; /* White */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #6D4C41; /* Darker Brown on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="firstname">Write the first name</h1>
+    <div id="lastname">Write the last name</div>
+    <p id="fullname">FullName</p>
+    <hr />
+    <button onclick="setFirstName()">FIRSTNAME</button>
+    <button onclick="setLastName()">LASTNAME</button>
+    <button onclick="setFullName()">FIRSTNAME NAME</button>
+    <button onclick="resetDefaults()">RESET DEFAULTS</button>
+
+    <script type="text/javascript">
+        function setFirstName() {
+            // Change the content of h1 to your first name
+            document.getElementById("firstname").innerText = "Rashmi";
+        }
+
+        function setLastName() {
+            // Change the content of div to your last name
+            document.getElementById("lastname").innerText = "Turkar";
+        }
+
+        function setFullName() {
+            // Change the content of p to your full name (firstname - lastname)
+            document.getElementById("fullname").innerText = "Rashmi Turkar";
+        }
+
+        function resetDefaults() {
+            // reset the firstname, lastname, and fullname to empty values
+            document.getElementById("firstname").innerText = "";
+            document.getElementById("lastname").innerText = "";
+            document.getElementById("fullname").innerText = "";
+        }
+    </script>
+</body>
+
+</html>

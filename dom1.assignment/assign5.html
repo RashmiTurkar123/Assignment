@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+			background-color: #f0f0f0;
+			text-align: center;
+			margin: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.container {
+			background-color: #808080; /* Grey */
+			color: #000; /* Black */
+			border-radius: 10px;
+			padding: 20px;
+			margin: 20px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+		}
+
+		input, select, button {
+			padding: 10px;
+			margin: 5px;
+			border: 1px solid #000; /* Black */
+			border-radius: 5px;
+			font-size: 16px;
+		}
+
+		hr {
+			width: 100%;
+			border: 1px solid #000; /* Black */
+			margin: 20px 0;
+		}
+
+		h1, h2, h3, h4 {
+			margin: 10px 0;
+		}
+
+		button {
+			background-color: #fff; /* White */
+			color: #000; /* Black */
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		button:hover {
+			background-color: #dcdcdc; /* Light Grey on hover */
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<input type="text" name="name" id="name" placeholder="Enter your name">
+		<select id="gender">
+			<option value="">--</option>
+			<option value="male">M</option>
+			<option value="female">F</option>
+		</select>
+		<input type="text" name="email" id="email" placeholder="Enter your email">
+		<input type="text" name="mobile" id="mobile" placeholder="Enter your mobile">
+		<hr>
+		<h1 id="dName">NAME</h1>
+		<h2 id="dGender">GENDER</h2>
+		<h3 id="dEmail">EMAIL</h3>
+		<h4 id="dMobile">MOBILE</h4>
+		<hr>
+		<button onclick="showName()">NAME</button>
+		<button onclick="showGender()">GENDER</button>
+		<button onclick="showEmail()">EMAIL</button>
+		<button onclick="showMobile()">MOBILE</button>
+		<button onclick="resetForm()">RESET FORM</button>
+		<button onclick="resetDisplay()">RESET DISPLAY</button>
+	</div>
+
+	<script type="text/javascript">
+		function showName() {
+			// Show filled name inside h1
+			let p = document.getElementById('name').value;
+			document.getElementById('dName').innerText = p;
+		}
+
+		function showGender() {
+			// Show the selected gender inside h2
+			let p = document.getElementById('gender').value;
+			document.getElementById('dGender').innerText = p;
+		}
+
+		function showEmail() {
+			// Show the filled email inside h3
+			let p = document.getElementById('email').value;
+			document.getElementById('dEmail').innerText = p;
+		}
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+			let p = document.getElementById('mobile').value;
+			document.getElementById('dMobile').innerText = p;
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+			document.getElementById('name').value = "";
+			document.getElementById('gender').value = "";
+			document.getElementById('email').value = "";
+			document.getElementById('mobile').value = "";
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+			document.getElementById('dName').innerText = "";
+			document.getElementById('dGender').innerText = "";
+			document.getElementById('dEmail').innerText = "";
+			document.getElementById('dMobile').innerText = "";
+		}
+	</script>
+</body>
+</html>

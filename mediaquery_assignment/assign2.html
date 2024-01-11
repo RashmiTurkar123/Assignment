@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assign2</title>
+    <style>
+        #navbar{
+            background-color: yellow;
+            font-size: 40px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        #boxes{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,340px);
+            gap: 20px;
+        }
+
+        #left{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(3,100px);
+            gap: 20px;
+        }
+
+        #boxes>div:nth-child(1){
+            background-color: red;
+        }
+        #left>div:nth-child(1){
+            background-color: green;
+        }
+        #left>div:nth-child(2){
+            background-color: green;
+        }
+        #left>div:nth-child(3){
+            background-color: green;
+        }
+
+        @media all and (max-width:600px) and (min-width:400px) {
+            #boxes {
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: repeat(2,200px);
+            }
+            #left{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(1,100px);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">Navigation</div>
+    <div id="boxes">
+        <div>LEFT BOX</div>
+        <div id="left">
+            <div>RIGHT BOX</div>
+            <div>RIGHT BOX</div>
+            <div>RIGHT BOX</div>
+        </div>
+    </div>    
+</body>
+</html>

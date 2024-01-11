@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRIVING AGE CHECK</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Driving Checking Meter</h1>
+    <input type="number" id="age" placeholder="Enter your age">
+    <button onclick="checkAge()">Check Age</button>
+    <p id="display"></p>
+
+    <script>
+        let pTag = document.getElementById("display");
+
+        function checkAge() {
+            let enteredAge = document.getElementById("age").value;
+
+            if (enteredAge > 18) {
+                pTag.innerText = "You can drive in India!";
+            } else if (enteredAge < 18) {
+                pTag.innerText = "You can't drive in India";
+            } else {
+                pTag.innerText = "You are just old enough to drive in India!";
+            }
+        }
+    </script>
+</body>
+
+</html>
+

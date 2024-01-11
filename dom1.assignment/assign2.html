@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Values</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        input, select {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        hr {
+            width: 100%;
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="name" id="name" placeholder="Enter your name">
+    <select id="gender">
+        <option value="">--</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+    </select>
+    <input type="email" name="email" id="email" placeholder="Enter your email">
+    <input type="number" name="mobile" id="mobile" placeholder="Enter your mobile number">
+    <hr>
+    <button onclick="showName()">SHOW NAME</button>
+    <button onclick="showGender()">SHOW GENDER</button>
+    <button onclick="showEmail()">SHOW EMAIL</button>
+    <button onclick="showMobile()">SHOW MOBILE</button>
+
+    <script type="text/javascript">
+        function showName() {
+            let n = document.getElementById('name').value;
+            alert(n);
+        }
+
+        function showGender() {
+            let m = document.getElementById("gender").value;
+            alert(m);
+        }
+
+        function showEmail() {
+            let p = document.getElementById("email").value;
+            alert(p);
+        }
+
+        function showMobile() {
+            let q = document.getElementById("mobile").value;
+            alert(q);
+        }
+    </script>
+</body>
+</html>
