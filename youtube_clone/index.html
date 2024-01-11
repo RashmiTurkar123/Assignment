@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"
+        href="data:image/png;base64,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">
+</head>
+
+<body>
+    <div class="header">
+        <div class="col-1">
+            <i class="ri-menu-line"></i>
+            <div class="logo">
+                <div class="logo-img">
+                    <img src="https://betanews.com/wp-content/uploads/2017/08/new-youtube-logo.jpg" alt="ytlogo">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <form action="#">
+                <input type="text" class="searchInput" placeholder="Search">
+            </form>
+            <button class="search"><i class="ri-search-line"></i></button>
+            <button class="mic"><i class="ri-mic-line"></i></button>
+        </div>
+        <div class="col-3">
+            <i class="ri-video-add-line"></i>
+            <i class="ri-notification-fill"></i>
+            <i class="ri-user-fill"></i>
+        </div>
+    </div>
+
+    <!-- wrapper -->
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="list1">
+                <a class="sidebar-item"><i class="ri-home-3-line"></i>Home</a>
+                <a class="sidebar-item"><i class="ri-compass-3-line"></i>Explore</a>
+                <a class="sidebar-item"><i class="ri-wireless-charging-fill"></i>Shorts</a>
+                <a class="sidebar-item"><i class="ri-rss-line"></i></i>Subscriptions</a>
+                <hr>
+                <a class="sidebar-item"><i class="ri-links-line"></i>Library</a>
+                <a class="sidebar-item"><i class="ri-chat-history-line"></i>History</a>
+                <a class="sidebar-item"><i class="ri-folder-video-line"></i></i>Your videos</a>
+                <a class="sidebar-item"><i class="ri-timeline-view"></i>Watch later</a>
+                <a class="sidebar-item"><i class="ri-play-list-2-line"></i>All videos</a>
+                <a class="sidebar-item"><i class="ri-arrow-down-line"></i>Show more</a>
+                <h4>More from youtue</h4>
+                <a class="sidebar-item"><i class="ri-keyboard-box-line"></i>Gaming</a>
+                <a class="sidebar-item"><i class="ri-live-line"></i>Live</a>
+                <a class="sidebar-item"><i class="ri-award-line"></i>Sports</a>
+                <a class="sidebar-item"><i class="ri-settings-5-line"></i>Setting</a>
+                <a class="sidebar-item"><i class="ri-flag-line"></i>Report History</a>
+                <a class="sidebar-item"><i class="ri-question-line"></i>Help</a>
+                <a class="sidebar-item"><i class="ri-feedback-line"></i>Send Feedback</a>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <div class="tagline">
+                <div class="tag">
+                    <p>All</p>
+                </div>
+                <div class="tag">
+                    <p>Data Science</p>
+                </div>
+                <div class="tag">
+                    <p>Flutter</p>
+                </div>
+                <div class="tag">
+                    <p>Java</p>
+                </div>
+                <div class="tag">
+                    <p>React</p>
+                </div>
+                <div class="tag">
+                    <p>UI/UX</p>
+                </div>
+                <div class="tag">
+                    <p>DSA</p>
+                </div>
+            </div>
+
+            <div class="video-wrapper">
+                
+            </div>
+        </div>
+    </div>
+    <script src="javascript.js">
+
+    </script>
+
+</body>
+
+</html>
