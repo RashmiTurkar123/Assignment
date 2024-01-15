@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Innovators Summit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #fdfdfd;
+    }
+
+    header {
+      background: linear-gradient(45deg, #ff9900, #ff66cc);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      transition: background 0.3s;
+    }
+
+    header:hover {
+      background: linear-gradient(45deg, #ff66cc, #3a2f1e);
+    }
+
+    .logo img {
+      max-width: 200px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 30px;
+      background-color: lavenderblush;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    #about h2,
+    #features h2,
+    #call-to-action h2 {
+      color: #333;
+      text-align: center;
+    }
+
+    .feature {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .feature img {
+      max-width: 50%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    .feature img:hover {
+      transform: scale(1.1);
+    }
+
+    a.cta-button {
+      display: inline-block;
+      background-color: #ff4081;
+      color: #fff;
+      padding: 15px 25px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    a.cta-button:hover {
+      background-color: #d81b60;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  </style>
+
+  <body>
+    <header>
+      <div class="header">
+        <div class="logo">
+          <img
+            src="https://cdn.dribbble.com/users/1785298/screenshots/6421936/tech_summit-06_4x.png?resize=400x300&vertical=center"
+            alt="Tech Innovators Summit Logo"
+          />
+        </div>
+        <div>
+          <h1>Tech Innovators Summit</h1>
+          <p>Unleashing the Future of Technology</p>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About the Summit</h2>
+      <p>
+        Join us for a groundbreaking Tech Innovators Summit where industry
+        leaders, visionaries, and innovators come together to explore the latest
+        trends and shape the future of technology.
+      </p>
+    </section>
+
+    <section id="features">
+      <h2>Key Features</h2>
+      <div class="feature">
+        <img
+          src="https://images.inc.com/uploaded_files/image/1920x1080/getty_180521689_59623.jpg"
+        />
+        <h3>Inspirational Talks</h3>
+        <p>
+          Engage with thought-provoking talks from technology experts and
+          visionaries.
+        </p>
+      </div>
+      <div class="feature">
+        <img
+          src="https://remote-how.com/wp-content/uploads/adults-brainstorming-desk-1595385.jpg"
+          alt="Interactive Workshops Image"
+        />
+        <h3>Interactive Workshops</h3>
+        <p>
+          Participate in hands-on workshops to enhance your skills and
+          knowledge.
+        </p>
+      </div>
+      <div class="feature">
+        <img
+          src="https://s30876.pcdn.co/wp-content/uploads/Career-Connections-1170x630.jpg.optimal.jpg"
+          alt="Networking Opportunities Image"
+        />
+        <h3>Networking Opportunities</h3>
+        <p>
+          Connect with like-minded professionals and expand your professional
+          network.
+        </p>
+      </div>
+    </section>
+
+    <section id="call-to-action">
+      <h2>Don't Miss Out!</h2>
+      <p>Secure your spot now and be a part of the Tech Revolution.</p>
+      <a href="#" class="cta-button">Get Your Pass</a>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Tech Innovators Summit. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
